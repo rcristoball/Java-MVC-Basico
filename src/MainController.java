@@ -1,3 +1,6 @@
+
+import Models.CalculadoraModel;
+
 /**
  * Controlador principal de la aplicación.
  * Decide que controlador cargar según la vista pasada en el constructor
@@ -8,6 +11,7 @@ public class MainController {
     public enum Controllers{CLI,GUI};
     
     protected Controllers ctrl;
+    protected CalculadoraModel model;
     
     public Controllers getCtrl(){
         return this.ctrl;
@@ -15,6 +19,7 @@ public class MainController {
     
     public MainController(Controllers ctrls){
         this.ctrl=ctrls;
+        this.model=new CalculadoraModel();
         
         switch(this.ctrl){
             case CLI:
