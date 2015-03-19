@@ -8,29 +8,9 @@ import cli.controllers.CLIController;
  * rcristoball(raucrili@gmail.com)
  */
 public class MainController {
-    //Controladores según la distintas vistas
-    public enum Controllers{CLI,GUI};
     
-    protected Controllers ctrl;
-    protected CalculadoraModel model;
-    
-    public Controllers getCtrl(){
-        return this.ctrl;
-    }
-    
-    public MainController(Controllers ctrls){
-        this.ctrl=ctrls;
-        this.model=new CalculadoraModel();
-        
-        switch(this.ctrl){
-            case CLI:
-                //Carga el controlador de la vista CLI
-                new CLIController(this.model);
-                break;
-            case GUI:
-                //Carga el controlador de la Vista GUI
-                System.out.println("Controlador GUI: No Implementado");
-                break;
-        }
+    public MainController(){
+        //Carga el controlador de la vista CLI
+        new CLIController(new CalculadoraModel());
     }
 }
