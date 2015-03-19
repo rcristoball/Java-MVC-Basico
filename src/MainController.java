@@ -1,5 +1,6 @@
 
 import Models.CalculadoraModel;
+import cli.controllers.CLIController;
 
 /**
  * Controlador principal de la aplicación.
@@ -24,7 +25,7 @@ public class MainController {
         switch(this.ctrl){
             case CLI:
                 //Carga el controlador de la vista CLI
-                System.out.println("Controlador CLI: No Implementado");
+                new CLIController(this.model);
                 break;
             case GUI:
                 //Carga el controlador de la Vista GUI
