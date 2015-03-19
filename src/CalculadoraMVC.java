@@ -16,14 +16,20 @@ public class CalculadoraMVC {
     public static void main(String[] args){
 
         //Comprueba que solo se ha introducido un solo parámetro
+        //Comprueba que solo se ha introducido un solo parámetro
         if(args.length==1){
             //Según el parámetro lanza el controlador correspondiente
             run(args[0]);
-        }
-        
-        // Si no se pasan parámetros lanza la ayuda
-        if(args.length!=1)
+        }else if(args.length>1){
+            //Se han introducido más de un parámetro
+            System.out.println("Ha introducido más de un parámetro en la orden."
+                    + " Este comando solo admite un único parámetro.\n");
             help();
+        }else {
+            //No se han introducido parámetros
+            System.out.println("No ha introducido ningún parámetro \n");
+            help();
+        }
     }
 
     /**
