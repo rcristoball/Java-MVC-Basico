@@ -1,6 +1,7 @@
 
 import Models.CalculadoraModel;
 import cli.controllers.CLIController;
+import gui.controller.GUIController;
 
 /**
  * Controlador principal de la aplicación.
@@ -29,7 +30,7 @@ public class MainController {
                 break;
             case GUI:
                 //Carga el controlador de la Vista GUI
-                System.out.println("Controlador GUI: No Implementado");
+                new GUIController(this.model);
                 break;
         }
     }
