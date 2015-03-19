@@ -15,6 +15,7 @@ public class CLIController {
         try {
             this.model=model;
             this.view=new CLIView();
+            sumaDosNumeros();
         } catch (Exception ex) {
             this.view.setErrorMessage(ex.getMessage());
         }
