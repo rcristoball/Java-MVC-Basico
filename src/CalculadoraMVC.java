@@ -45,23 +45,15 @@ public class CalculadoraMVC {
         boolean showHelp=false;
         switch(cmd){
             case "--cli":
-                param="cli: línea de comandos: No implementada";
+                new MainController(MainController.Controllers.CLI);
                 break;
             case "--gui":
-                param="gui: interfaz gráfica: No implementada";
+                new MainController(MainController.Controllers.GUI);
                 break;
             case "--help":
-                param="help";
-                showHelp=true;
-                break;
             default:
-                param= cmd+" es un parámetro incorrecto";
-                showHelp=true;
-        }
-        
-        System.out.println("Calculadora MVC: ("+param+")" );
-        
-        if(showHelp)
-            help();
+                System.out.println("<"+cmd+">"+" no es un parámetro válido.\n");
+                help();
+        } 
     }
 }
