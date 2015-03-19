@@ -5,7 +5,7 @@
  * en modo línea de comando o en modo gráfico.
  * @author rcristoball(raucrili@gmail.com)
  */
-public class CalculadoraMVC {   
+public class Calculadora {   
     /**
      * La aplicación solo admite un parámetro que pude ser:
      * --cli: para ejecutar la aplicación en modo línea de comandos
